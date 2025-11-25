@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparer Produits - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="flex text-sm text-gray-600">
+            <a href="index.html" class="hover:text-blue-600">Accueil</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <a href="admin.html" class="hover:text-blue-600">Administration</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <a href="admin-products.html" class="hover:text-blue-600">Mes Produits</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <span class="text-gray-800">Comparer Produits</span>
+        </nav>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Comparer Produits 📊</h1>
+        
+        <div class="bg-white rounded-xl shadow-lg border overflow-hidden mb-8">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-blue-50">
+                        <tr class="text-left">
+                            <th class="px-6 py-4 font-semibold">Critère</th>
+                            <th class="px-6 py-4 font-semibold">Mon Produit</th>
+                            <th class="px-6 py-4 font-semibold">Concurrent 1</th>
+                            <th class="px-6 py-4 font-semibold">Concurrent 2</th>
+                            <th class="px-6 py-4 font-semibold">Mon Produit</th>
+                            <th class="px-6 py-4 font-semibold">Concurrent 3</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Prix</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-2xl font-bold text-green-700">749€</td>
+                                <td class="px-6 py-4">699€</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-green-600 font-semibold">-50€</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Disponibilité</td>
+                                <td class="px-6 py-4 text-green-600 font-semibold">En stock</td>
+                                <td class="px-6 py-4 text-green-600 font-semibold">En stock</td>
+                                <td class="px-6 py-4">
+                                    <div class="text-green-600 font-semibold">En stock</td>
+                                <td class="px-6 py-4 text-green-600 font-semibold">En stock</td>
+                                <td class="px-6 py-4 text-green-600 font-semibold">En stock</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Note Client</td>
+                                <td class="px-6 py-4">4.5/5</td>
+                                <td class="px-6 py-4">4.2/5</td>
+                                <td class="px-6 py-4">4.3/5</td>
+                                <td class="px-6 py-4">4.1/5</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 bg-gray-50">
+                                <td class="px-6 py-4 font-semibold">Processeur</td>
+                                <td class="px-6 py-4">Snapdragon 8 Gen 4</td>
+                                <td class="px-6 py-4 text-green-600 font-semibold">Snapdragon 8 Gen 4</td>
+                                <td class="px-6 py-4">Snapdragon 8 Gen 4</td>
+                                <td class="px-6 py-4 text-green-600 font-semibold">Snapdragon 8 Gen 4</td>
+                                <td class="px-6 py-4">Snapdragon 8 Gen 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comparison Analysis -->
+            <div class="bg-white rounded-xl shadow-lg border p-8">
+                <h2 class="text-2xl font-bold mb-6">Analyse de la Concurrence 🔍</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Strengths -->
+                    <div class="bg-green-50 rounded-lg p-6">
+                    <h3 class="font-semibold text-lg mb-4 text-green-700">Points Forts</h3>
+                    <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-green-600 mr-2"></i>
+                            Mémorie RAM supérieure</li>
+                            <li class="flex items-center">
+                                <i data-feather="check" class="text-green-600 mr-2"></i>
+                            Stockage plus important</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Weaknesses -->
+                    <div class="bg-red-50 rounded-lg p-6">
+                    <h3 class="font-semibold text-lg mb-4 text-red-700">Points Faibles</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i data-feather="alert-triangle" class="text-red-600 mr-2"></i>
+                            Prix plus élevé que la concurrence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
