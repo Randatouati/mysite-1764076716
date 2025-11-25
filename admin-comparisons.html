@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaisons - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="flex text-sm text-gray-600">
+            <a href="index.html" class="hover:text-blue-600">Accueil</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <a href="admin.html" class="hover:text-blue-600">Administration</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <span class="text-gray-800">Comparaisons</span>
+        </nav>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8">Historique des Comparaisons 📊</h1>
+        
+        <!-- New Comparison Button -->
+        <div class="mb-8">
+            <a href="new-comparison.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center">
+                <i data-feather="plus" class="mr-2"></i>
+                Nouvelle Comparaison
+            </a>
+        </div>
+
+        <!-- Comparisons History Table -->
+        <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr class="text-left text-sm font-semibold text-gray-700">
+                                <th class="px-6 py-4">Date</th>
+                                <th class="px-6 py-4">Produit Comparé</th>
+                                <th class="px-6 py-4">Nombre de Concurrents</th>
+                                <th class="px-6 py-4">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                                <!-- Comparison 1 -->
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4">15/01/2024</th>
+                                <td class="px-6 py-4">Mon Smartphone Premium</th>
+                                <td class="px-6 py-4">5</th>
+                                    <td class="px-6 py-4 text-green-600 font-semibold">Complétée</th>
+                                    <td class="px-6 py-4">
+                                        <div class="flex space-x-2">
+                                            <a href="compare-products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                            Voir Détails
+                                        </a>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Comparison 2 -->
+                                <tr class="hover:bg-gray-50 bg-gray-50">
+                                    <td class="px-6 py-4">12/01/2024</th>
+                                    <td class="px-6 py-4">Tablette Pro Max</th>
+                                <td class="px-6 py-4">4</th>
+                                    <td class="px-6 py-4 text-green-600 font-semibold">Complétée</th>
+                                    <td class="px-6 py-4">
+                                        <a href="compare-products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                            Voir Détails
+                                        </a>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Comparison 3 -->
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4">10/01/2024</th>
+                                    <td class="px-6 py-4">Écouteurs Pro</th>
+                                <td class="px-6 py-4">3</th>
+                                    <td class="px-6 py-4 text-yellow-600 font-semibold">En Cours</th>
+                                    <td class="px-6 py-4">
+                                        <a href="compare-products.html" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                            Voir Détails
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
