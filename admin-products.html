@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Produits - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="flex text-sm text-gray-600">
+            <a href="index.html" class="hover:text-blue-600">Accueil</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <a href="admin.html" class="hover:text-blue-600">Administration</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <span class="text-gray-800">Mes Produits</span>
+        </nav>
+    </div>
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">Mes Produits 🏷️</h1>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center">
+                <i data-feather="plus" class="mr-2"></i>
+            Ajouter Produit
+        </button>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-lg shadow border p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                            <i data-feather="dollar-sign" class="text-blue-600"></i>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-800">12</div>
+                    <div class="text-sm text-gray-600">Produits</div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow border p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                            <i data-feather="shopping-cart" class="text-green-600"></i>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-800">8</div>
+                    <div class="text-sm text-gray-600">En Stock</div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow border p-6 text-center">
+                        <div class="text-2xl font-bold text-gray-800">23</div>
+                    <div class="text-sm text-gray-600">Vus</div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow border p-6 text-center">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto">
+                            <i data-feather="trending-up" class="text-yellow-600"></i>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-800">4.2</div>
+                    <div class="text-sm text-gray-600">Note Moy.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Table -->
+        <div class="bg-white rounded-xl shadow-lg border overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead class="bg-gray-50">
+                        <tr class="text-left text-sm font-semibold text-gray-700">
+                            <th class="px-6 py-4">Produit</th>
+                            <th class="px-6 py-4">Mon Prix</th>
+                            <th class="px-6 py-4">Prix Concurrent</th>
+                            <th class="px-6 py-4">Différence</th>
+                            <th class="px-6 py-4">Performance</th>
+                            <th class="px-6 py-4">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <!-- Product 1 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <img src="http://static.photos/technology/80x80/5" alt="Produit 1" class="w-16 h-16 object-contain mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Mon Smartphone Premium</h4>
+                                        <div class="text-xs text-gray-500">SKU: MP-SM-001</div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                    <div class="text-2xl font-bold text-green-700">749€</div>
+                            <td class="px-6 py-4 text-gray-800">699€</div>
+                            <td class="px-6 py-4 text-red-600 font-semibold">-50€</div>
+                            <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+                                            <div class="bg-red-600 h-2 rounded-full" style="width: 85%"></div>
+                                        <span class="text-sm text-gray-600">85%</span>
+                                    </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                            <a href="edit-product.html" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                                Éditer
+                                            </a>
+                                            <a href="compare-products.html" class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                                Comparer
+                                            </a>
+                                        </div>
+</td>
+                        </tr>
+                        
+                        <!-- Product 2 -->
+                        <tr class="hover:bg-gray-50 bg-gray-50">
+                            <td class="px-6 py-4">
+                                <div class="flex items-center">
+                                    <img src="http://static.photos/technology/80x80/6" alt="Produit 2" class="w-16 h-16 object-contain mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Tablette Pro Max</h4>
+                                        <div class="text-xs text-gray-500">SKU: TP-MX-002</div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                    <div class="text-2xl font-bold text-green-700">899€</div>
+                            <td class="px-6 py-4 text-gray-800">879€</div>
+                            <td class="px-6 py-4 text-green-600 font-semibold">-20€</div>
+                            <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-24 bg-gray-200 rounded-full h-2 mr-2">
+                                            <div class="bg-yellow-500 h-2 rounded-full" style="width: 65%"></div>
+                                        <span class="text-sm text-gray-600">65%</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4">
+                                    <div class="flex space-x-2">
+                                            <a href="edit-product.html" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                                Éditer
+                                            </a>
+                                            <a href="compare-products.html" class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-sm inline-block text-center">
+                                                Comparer
+                                            </a>
+                                        </div>
+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+    <script>
+        feather.replace();
+        
+        // Initialize real-time data synchronization
+        document.addEventListener('DOMContentLoaded', function() {
+            const api = new PrixCompareAPI();
+            
+            // Setup webhook for real-time updates
+            api.setupWebhook('current-supplier-id', function(data) {
+                console.log('Real-time update received:', data);
+                // Update the UI with new data
+                updateProductTable(data);
+            });
+            
+            function updateProductTable(productsData) {
+                console.log('Product table updated with:', productsData);
+            }
+        });
+    </script>
+</body>
+</html>
