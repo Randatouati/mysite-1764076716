@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrents - Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-4">
+        <nav class="flex text-sm text-gray-600">
+            <a href="index.html" class="hover:text-blue-600">Accueil</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <a href="admin.html" class="hover:text-blue-600">Administration</a>
+            <i data-feather="chevron-right" class="mx-2 w-4 h-4"></i>
+            <span class="text-gray-800">Concurrents</span>
+        </nav>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold">Concurrents à Surveiller 👁️</h1>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold flex items-center">
+                <i data-feather="plus" class="mr-2"></i>
+            Ajouter Concurrent
+        </button>
+        </div>
+
+        <!-- Competitors List -->
+        <div class="bg-white rounded-xl shadow-lg border overflow-hidden mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr class="text-left text-sm font-semibold text-gray-700">
+                                <th class="px-6 py-4">Nom</th>
+                                <th class="px-6 py-4">URL</th>
+                                <th class="px-6 py-4">Status</th>
+                                <th class="px-6 py-4">Produits Surveillés</th>
+                                <th class="px-6 py-4">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                                <!-- Competitor 1 -->
+                                <tr class="hover:bg-gray-50">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <img src="http://static.photos/retail/80x80/1" alt="Amazon" class="w-12 h-12 object-contain mr-4">
+                                            <div>
+                                                <h4 class="font-semibold">Amazon</h4>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-800">amazon.fr</div>
+                                    <td class="px-6 py-4">
+                                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                                Active
+                                            </span>
+                                    </td>
+                                    <td class="px-6 py-4">12</div>
+                                    <td class="px-6 py-4">
+                                        <div class="flex space-x-2">
+                                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                                    Éditer
+                                                </button>
+                                                <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm">
+                                                    Supprimer
+                                                </button>
+                                            </div>
+                                    </td>
+                                </tr>
+                                
+                                <!-- Competitor 2 -->
+                                <tr class="hover:bg-gray-50 bg-gray-50">
+                                    <td class="px-6 py-4">
+                                        <div class="flex items-center">
+                                            <img src="http://static.photos/retail/80x80/2" alt="Fnac" class="w-12 h-12 object-contain mr-4">
+                                            <div>
+                                                <h4 class="font-semibold">Fnac</h4>
+                                    </td>
+                                    <td class="px-6 py-4 text-gray-800">fnac.com</div>
+                                    <td class="px-6 py-4">
+                                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                                Active
+                                            </span>
+                                    </td>
+                                    <td class="px-6 py-4">8</div>
+                                    <td class="px-6 py-4">
+                                        <div class="flex space-x-2">
+                                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                                    Éditer
+                                                </button>
+                                                <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm">
+                                                    Supprimer
+                                                </button>
+                                            </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Competitor Form -->
+        <div class="bg-white rounded-xl shadow-lg border p-8">
+                    <h2 class="text-2xl font-bold mb-6">Ajouter un Concurrent</h2>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nom du Concurrent</label>
+                        <input type="text" placeholder="Ex: Amazon, Fnac, Darty..." class="w-full border rounded-lg px-4 py-3">
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">URL du Site</label>
+                        <input type="text" placeholder="https://..." class="w-full border rounded-lg px-4 py-3">
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="md:col-span-2 pt-4 border-t">
+                            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold">
+                                Ajouter le Concurrent
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
