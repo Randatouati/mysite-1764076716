@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrixCompare Pro - Comparateur de Prix Intelligent</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+<!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Comparez. Économisez. Achetez malin. 💰</h1>
+            <p class="text-xl mb-8">Trouvez les meilleurs prix et fiches techniques de millions de produits</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto relative">
+                <div class="flex bg-white rounded-lg shadow-lg overflow-hidden">
+                    <input type="text" 
+                           placeholder="Rechercher un produit, une marque..." 
+                           class="w-full px-6 py-4 text-gray-800 focus:outline-none text-lg">
+                    <button class="bg-orange-500 hover:bg-orange-600 px-8 py-4 text-white font-semibold transition duration-300">
+                        <i data-feather="search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Catégories Populaires 📱</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Category Cards -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="smartphone" class="text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Smartphones</h3>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="tv" class="text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">TV & Audio</h3>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="laptop" class="text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Laptops</h3>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="watch" class="text-red-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Wearables</h3>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="camera" class="text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Caméras</h3>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 text-center cursor-pointer">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="more-horizontal" class="text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Plus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Produits Tendances 🔥</h2>
+                <a href="/categories.html" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center">
+                    Voir tout <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Cards -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border border-gray-100">
+                    <div class="p-4">
+                        <img src="http://static.photos/technology/320x240/1" alt="OnePlus 15" class="w-full h-48 object-contain mb-4">
+                        <h3 class="font-bold text-lg mb-2">OnePlus 15 5G</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                                <i data-feather="star" class="fill-current"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">(4.5)</span>
+                        </div>
+                        <div class="text-2xl font-bold text-green-600 mb-2">699€</div>
+                        <div class="text-sm text-gray-500 line-through">799€</div>
+                        <div class="flex justify-between text-sm text-gray-600 mt-2">
+                            <span>16GB RAM</span>
+                            <span>512GB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More product cards would go here -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+<script src="script.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script src="api.js"></script>
+<script>
+        feather.replace();
+    </script>
+</body>
+</html>
